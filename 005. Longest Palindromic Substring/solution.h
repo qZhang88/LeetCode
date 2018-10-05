@@ -16,7 +16,7 @@ class Solution {
 public:
     string longestPalindrome(string s) {
         int len = s.size();
-        if (len == 0) return s;
+        if (len == 0 or len == 1) return s;
         int start = 0, last = 0;
         for (int i=0; i<len-1; ++i) {
             longestPalindrome(s, i, i, start, last);
